@@ -27,9 +27,19 @@
   &__menu-link {
     display: flex;
     align-items: center;
+    svg {
+      margin-left: .5rem;
+    }
     &:hover {
       color: #FDF5FF;
       transition: all .3s;
+      svg {
+        margin-left: .5rem;
+      }
+      svg > path{
+        stroke-opacity: 1;
+
+      }
     }
   }
   .header__menu-list--more:hover .header__submenu {
@@ -179,12 +189,18 @@
     padding: 3.3rem ;
     margin-bottom: 10rem;
     transition: transform .2s;
-    z-index: 4;
+
     &:hover{
       transform: scale(1.1);
       background: rgba(255, 110, 48, 0.6);
       background: radial-gradient(ellipse farthest-corner at top right, rgba(255, 110, 48, 0.6) 0%, #283036 14%);
       border-radius: 1.5rem;
+      .popular__item-app__subtitle{
+
+        backdrop-filter: blur(2.5rem);
+      }
+
+
 
 
     }
@@ -192,6 +208,9 @@
   &__item-top{
     display: flex;
     margin-bottom: 3rem;
+    z-index: 1000;
+    background: transparent;
+
   }
   &__item-app{
     margin-left: 3rem;
@@ -201,16 +220,13 @@
     line-height: 3.6rem;
     color: $app2;
   }
-  &__item-app__subtitle{
-    font-size: 1.6rem;
-    line-height: 3rem;
-    color: $app1;
-  }
+
   &__item-info{
     width: 32.6rem;
     font-size: 1.6rem;
     line-height: 3rem;
     margin-bottom: 3rem;
+    //backdrop-filter: blur(2.5rem);
   }
   &__item-bottom{
     display: flex;
