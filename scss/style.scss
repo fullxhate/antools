@@ -7,6 +7,7 @@
 .header {
   padding: 2rem 2rem;
 
+
   &__items {
     display: flex;
     justify-content: space-between;
@@ -20,6 +21,7 @@
 
   &__menu-list {
     margin-right: 4rem;
+    position: relative;
   }
 
   &__menu-link {
@@ -30,9 +32,18 @@
       transition: all .3s;
     }
   }
+  .header__menu-list--more:hover .header__submenu {
+    display: block;
+  }
 
   &__submenu {
     display: none;
+    position: absolute;
+
+  }
+  &__submenu-link:hover {
+    color: #FDF5FF;
+    transition: all .3s;
   }
 
   &__profile {
