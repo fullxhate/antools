@@ -1,3 +1,16 @@
+$(function(){
+    $(".popular__item").slice(0, 6).show();
+    $(".popular__more-link").on("click", function(e){
+        e.preventDefault();
+        $(".popular__item:hidden").slice(0, 3).slideDown();
+        if($(".popular__item:hidden").length == 0) {
+            $(".popular__more-link").css("display" ,"none")
+        }
+    });
+
+})
+
+
 
 let swiper = new Swiper('.swiper', {
     loop: false,

@@ -189,19 +189,16 @@
     padding: 3.3rem ;
     margin-bottom: 10rem;
     transition: transform .2s;
+    display: none;
 
     &:hover{
-      transform: scale(1.1);
+      transform: scale(1.03);
       background: rgba(255, 110, 48, 0.6);
       background: radial-gradient(ellipse farthest-corner at top right, rgba(255, 110, 48, 0.6) 0%, #283036 14%);
       border-radius: 1.5rem;
-      .popular__item-app__subtitle{
-
-        backdrop-filter: blur(2.5rem);
+      svg > path {
+        fill-opacity :.7;
       }
-
-
-
 
     }
   }
@@ -245,7 +242,7 @@
     border-radius: .8rem ;
     &:hover{
       background: #283036;
-      box-shadow: 0px 5px 10px -3px rgba(18, 18, 18, 0.15);
+      filter: drop-shadow(0rem .4rem .4rem rgba(0, 0, 0, 0.25));
       svg > path{
         fill: #FD3B41;
       }
@@ -281,22 +278,26 @@
 
 
   &__center{
-    background: #FF4842;
-    background: radial-gradient(ellipse farthest-side at top left, #FF4842 0%, #283036 15%);
-
-
-
-
     border-radius: 2.5rem;
     padding: 5.5rem 8rem;
+    position: relative;
+    background-color: rgba(44, 53, 61, 0.2);
+
   }
   &__subtitle{
     text-align: center;
-    color: $text2;
+    color: $text3;
     font-weight: 500;
     font-size: 2.4rem;
     line-height: 3.6rem;
     margin-bottom: 5.5rem;
+  }
+  &__bg{
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 2.5rem;
+    backdrop-filter: blur(2.5rem );
   }
   &__logo{
     display: flex;
