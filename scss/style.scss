@@ -281,7 +281,10 @@
 
 }
 .brands {
+img{
 
+
+}
 
   &__center{
     border-radius: 2.5rem;
@@ -303,12 +306,13 @@
     top: 0;
     left: 0;
     border-radius: 2.5rem;
-    backdrop-filter: blur(2.5rem );
+
   }
   &__logo{
     display: flex;
     justify-content: space-between;
     align-items: center;
+
   }
 
 
